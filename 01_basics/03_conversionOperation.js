@@ -12,16 +12,17 @@ let valueInNumber = Number(score)
 
 
 // 1. Number() : converts value to number 
+
 //  "33" => 33    ; console.log(Number("33")); // 33
 // "33abc" => NaN   
 //  true => 1; false => 0
-
 let isLoggedIn = "maaz"
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
 //  console.log(booleanIsLoggedIn);  // true
 
 // 2. Boolean() : converts value to boolean
+
 // 1 => true; 0 => false
 // "" => false
 // "maaz" => true

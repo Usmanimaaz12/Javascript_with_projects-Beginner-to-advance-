@@ -1,6 +1,4 @@
-
-// Boolean comparisions
-// console.log(2 > 1);    
+// console.log(2 > 1);     
 // console.log(2 >= 1);
 // console.log(2 < 1);
 // console.log(2 == 1);   
@@ -23,14 +21,14 @@ console.log(undefined < 0); // false (undefined is converted to NaN)
 
 // === 
 
-console.log("2" === 2); 
+console.log("2" === 2,"m");  // false (string is not converted to number)
 
 
 // DIFFERENCE BETWEEN == AND ===
 // == (loose equality)  ; === (strict equality)
 // == operator does type conversion ; === operator doesn't do type conversion
 // == operator checks only value ; === operator checks value as well as type
-// == operator is slower than === operator 
+// == operator is slower than === operator  because of type conversion
 // == operator is not recommended to use ; === operator is recommended to use
 
 // Another equality operator is Object.is(), which is mostly the same as ===, but with a few special cases:

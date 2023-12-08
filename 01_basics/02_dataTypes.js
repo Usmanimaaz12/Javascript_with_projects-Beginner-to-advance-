@@ -2,12 +2,12 @@
 
 //Data Types in JS => 8
 // 1. number
-// 2. bigint      (created using n at the end of number)
+// 2. bigint      (created using n at the end of number, example : 10n)
 // 3. string
 // 4. boolean
 // 5. null
 // 6. undefined
-// 7. symbol
+// 7. symbol       (created using Symbol() function, example : Symbol("id"))
 // 8. object        (keys are always string or symbol, values can be anything)
 
 // Dynamic Typing => JS is dynamically typed language (no need to specify data type) ,  we can change the data type of variable at runtime
@@ -26,9 +26,8 @@
 // Many methods, such as Array.prototype.find() and Map.prototype.get(), return undefined when no element is found.
 
 
-// In JavaScript, objects are the only mutable values. Functions are, in fact, also objects with the additional capability of being callable.
-    
-// alert( 3 + 3) // we are using nodejs, not browser
+// In JavaScript, objects are the only mutable values. Functions are, in fact, also objects with the additional capability of being callable.     
+//alert( 3 + 3) // we are using nodejs, not browser
 
 console.log(3 
     +

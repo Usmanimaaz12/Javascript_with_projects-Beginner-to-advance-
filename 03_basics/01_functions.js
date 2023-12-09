@@ -8,12 +8,12 @@ function sayMyName(){
     console.log("H");
 }
 
-// sayMyName()
+// sayMyName() 
 
 // function addTwoNumbers(number1, number2){
 
 //     console.log(number1 + number2);
-// }
+// } 
 
 function addTwoNumbers(number1, number2){
 
@@ -27,7 +27,7 @@ const result = addTwoNumbers(3, 5)
 // console.log("Result: ", result);
 
 
-function loginUserMessage(username = "sam"){
+function loginUserMessage(username = null){
     if(!username){
         console.log("PLease enter a username");
         return
@@ -35,7 +35,7 @@ function loginUserMessage(username = "sam"){
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage()) // PLease enter a username  and undefined 
 // console.log(loginUserMessage("hitesh"))
 
 
@@ -43,10 +43,10 @@ function calculateCartPrice(val1, val2, ...num1){
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+// console.log(calculateCartPrice(200, 400, 500, 2000))     // [ 500, 2000 ] // rest operator will give array of all the values after val2
 
 const user = {
-    username: "hitesh",
+    username: "maaz",
     prices: 199
 }
 

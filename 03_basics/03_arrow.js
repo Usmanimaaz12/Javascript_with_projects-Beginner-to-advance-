@@ -1,5 +1,5 @@
 const user = {
-    username: "hitesh",
+    username: "maaz",
     price: 999,
 
     welcomeMessage: function() {
@@ -13,37 +13,39 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);
+console.log(this);  // this will give empty object as this is global object in nodejs
+
+
+// THREE WAYS TO DECLARE A FUNCTION : 1. function declaration 2. function expression 3. arrow function
 
 // function chai(){
-//     let username = "hitesh"
+//     let username = "maaz"
 //     console.log(this.username);
 // }
 
 // chai()
 
 // const chai = function () {
-//     let username = "hitesh"
+//     let username = "maaz"
 //     console.log(this.username);
 // }
 
-const chai =  () => {
-    let username = "hitesh"
-    console.log(this);
-}
-
+// const chai =  () => {
+//     let username = "maaz"
+//     console.log(this);
+// }
 
 // chai()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
-// }
+// }              //Note : if we use curly braces then we have to use return keyword
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// const addTwo = (num1, num2) =>  num1 + num2      //Note : if we don't use curly braces then we don't have to use return keyword
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+// const addTwo = (num1, num2) => ( num1 + num2 )   //Note : if we use parenthesis then we don't have to use return keyword
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "maaz"}) 
 
 
 console.log(addTwo(3, 4))

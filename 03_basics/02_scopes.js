@@ -1,8 +1,8 @@
-//var c = 300
-let a = 300
+//var c = 300  // global scope 
+let a = 300 
 if (true) {
-    let a = 10
-    const b = 20
+    let a = 10 
+    const b = 20 
     // console.log("INNER: ", a);
     
 }
@@ -15,7 +15,7 @@ if (true) {
 
 
 function one(){
-    const username = "hitesh"
+    const username = "maaz"
 
     function two(){
         const website = "youtube"
@@ -30,8 +30,8 @@ function one(){
 // one()
 
 if (true) {
-    const username = "hitesh"
-    if (username === "hitesh") {
+    const username = "maaz"
+    if (username === "maaz") {
         const website = " youtube"
         // console.log(username + website);
     }
@@ -44,7 +44,7 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5))   // this will work as function is hoisted 
 
 function addone(num){
     return num + 1
@@ -52,7 +52,7 @@ function addone(num){
 
 
 
-addTwo(5)
+ console.log(addTwo(5))  // this will not work as "function expression" is not hoisted
 const addTwo = function(num){
     return num + 2
 }

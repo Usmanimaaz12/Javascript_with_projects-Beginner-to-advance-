@@ -1,3 +1,12 @@
+// CONTROL FLOW
+// 1. if
+// 2. if else
+// 3. if else if else
+// 4. switch case
+// 5. ternary operator (CONDITION ? TRUE : FALSE)
+// 6. short circuiting (&&, ||) 
+// 7. truthy and falsy values 
+
 // if
 const isUserloggedIn = true
 const temperature = 41

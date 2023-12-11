@@ -54,3 +54,8 @@ console.log(addTwo(3, 4))
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach()
+
+// IMPORTANT  NOTES:
+// 1. In arrow function, this keyword is not defined. It will take the value of this from the parent scope 
+// 2. In arrow function, we cannot use this keyword to create new properties
+// 3. In arrow function, super keyword is not defined because it is used to call parent class constructor

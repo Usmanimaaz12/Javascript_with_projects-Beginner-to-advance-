@@ -1,4 +1,4 @@
-const userEmail = []
+const userEmail = []   // truthy value (we should check the length of array instead of checking the array itself)
 
 if (userEmail) {
     console.log("Got user email");
@@ -7,7 +7,6 @@ if (userEmail) {
 }
 
 // falsy values
-
 // false, 0, -0, BigInt 0n, "", null, undefined, NaN
 
 //truthy values
@@ -19,7 +18,7 @@ if (userEmail) {
 
 const emptyObj = {}
 
-if (Object.keys(emptyObj).length === 0) {
+if (Object.keys(emptyObj).length === 0) {   // Object.keys() will give array of all the keys of object
     console.log("Object is empty");
 }
 
@@ -29,7 +28,7 @@ let val1;
 // val1 = 5 ?? 10
 // val1 = null ?? 10
 // val1 = undefined ?? 15
-val1 = null ?? 10 ?? 20
+val1 = null ?? 10 ?? 20 ?? 30   // it will give first truthy value
 
 
 

@@ -19,3 +19,5 @@ do {
     console.log(`Score is ${score}`);
     score++
 } while (score <= 10);
+
+// do while loop will always execute at least once

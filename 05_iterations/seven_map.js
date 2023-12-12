@@ -8,3 +8,7 @@ const newNums = myNumers
                 .filter( (num) => num >= 40)
 
 console.log(newNums);
+
+// important points about map
+// 1. map returns a new array
+// 2. map does not change the original array

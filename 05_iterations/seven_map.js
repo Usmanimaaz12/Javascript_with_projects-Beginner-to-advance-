@@ -12,3 +12,18 @@ console.log(newNums);
 // important points about map
 // 1. map returns a new array
 // 2. map does not change the original array
+
+
+// Questtion : // What you have
+var officers = [
+  { id: 20, name: 'Captain Piett' },
+  { id: 24, name: 'General Veers' },
+  { id: 56, name: 'Admiral Ozzel' },
+  { id: 88, name: 'Commander Jerjerrod' }
+];
+// // What you need
+// [20, 24, 56, 88]
+
+// Answer:
+const ids = officers.map((off) => off.id)
+console.log(ids);

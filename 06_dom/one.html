@@ -8,16 +8,19 @@
         .bg-black{
             background-color: #212121;
             color: #fff;
+            font-size: 2rem;
         }
+
     </style>
 </head>
 <body class="bg-black">
     <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h1  id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
         <input type="password" name="" id="">
 
         <ul>
@@ -29,3 +32,42 @@
     </div>
 </body>
 </html>
+
+<script>
+    // code to practice over console of the browser
+    // console.log(window)
+    // console.log(window.document)
+    // console.log(document) // this will give limited properties
+    // console.dir(document) // this will give all the properties
+// Searching a DOM tree involves knowledge of tree searching algorithms. And this is where DSA is used.
+
+// getElementById:
+// This method is used to get the element of the DOM tree by its id. It returns the element with the specified id. If no such element exists, it returns null.
+// Syntax: document.getElementById(id) 
+// Parameters: This method accepts a single parameter as mentioned above and described below:
+// example: document.getElementById("title") 
+
+// getElementsByClassName:
+// This method is used to get the elements of the DOM tree by their class name. It returns a collection of all elements with the specified class name. If no such element exists, it returns an empty collection.
+// Syntax: document.getElementsByClassName(class)
+// Parameters: This method accepts a single parameter as mentioned above and described below:
+// example: document.getElementsByClassName("list-item")
+
+
+</script>
+
+
+<!--  window hierarchy (DOM)
+        window
+           |
+        document
+           |
+          HTML 
+         /    \
+      Head    Body         
+      /  \      \
+ title   meta   div
+
+  : : : : : : : : : : :
+ : : : : : : : : : : : : 
+    GOES ON LIKE THIS           -->

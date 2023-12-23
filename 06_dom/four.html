@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,20 +12,27 @@
     </ul>
 </body>
 <script>
+// Different ways to select the DOM elements and add, edit, remove them
+
+// method 1:   using innerHTML method
+// in this method whole tree is traversed and then the element is added
     function addLanguage(langName){
         const li = document.createElement('li');
-        li.innerHTML = `${langName}`
+        li.innerHTML = `${langName}`    // using innerHTML method
         document.querySelector('.language').appendChild(li)
     }
     addLanguage("python")
     addLanguage("typescript")
 
+// method 2:  using createTextNode method (optimal way)
+// in this method only the text is added to the element and then the element is added
     function addOptiLanguage(langName){
         const li = document.createElement('li');
-        li.appendChild(document.createTextNode(langName))
+        li.appendChild(document.createTextNode(langName))  // using createTextNode method
         document.querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
+
 
     //Edit
     const secondLang = document.querySelector("li:nth-child(2)")
@@ -37,7 +44,8 @@
 
     //edit
     const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
+    firstLang.outerHTML = '<li>TypeScript</li>'  // outerHTML will replace the whole element
+
 
     //remove
     const lastLang = document.querySelector('li:last-child')

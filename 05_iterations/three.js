@@ -31,19 +31,26 @@ map.set('IN', "India")
 
 // console.log(map);    // Map(3) {"IN" => "India", "USA" => "United States of America", "Fr" => "France"}
 
+
+
+//  ----------------------------------IMPORTANT-----------------------------------
+
+// for of loop is used to iterate over iterable objects like arrays, strings, maps, sets etc.
+// In the below example for of loop is used to iterate over map object but it will not iterate over object
+
 for (const [key, value] of map) {
     // console.log(key, '=>', value);
-}   
+}    // IN => India  USA => United States of America  Fr => France
 
 const myObject = {
     game1: 'NFS',
     game2: 'Spiderman'
 }
 
-// for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);    
+for (const [key, value] of myObject) {
+    console.log(key, ':-', value);    
     
-// }   // TypeError: myObject is not iterable
+}   // TypeError: myObject is not iterable
 
 // for (const [key, value] of Object.entries(myObject)) {
 //     console.log(key, ':-', value);

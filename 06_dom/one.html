@@ -53,6 +53,29 @@
 // Parameters: This method accepts a single parameter as mentioned above and described below:
 // example: document.getElementsByClassName("list-item")
 
+// document.getElementById("title").style.color = "red"
+// document.getElementById("title").style.backgroundColor = "black"
+
+
+// querySelector vs querySelectorAll
+// querySelector: it will give the first element of the DOM tree with the specified selector
+// querySelectorAll: it will give all the elements of the DOM tree with the specified selector
+
+// NodeList vs HTMLCollection
+// the difference between NodeList and HTMLCollection is that NodeList is a list of nodes that can contain any type of node, while HTMLCollection is a list of element nodes.
+// example: document.querySelectorAll("h2") // NodeList [h2, h2, h2]    
+//         document.getElementsByClassName("list-item") // HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item] 
+// forEach method is not available in HTMLCollection but it is available in NodeList
+// we convert HTMLCollection to array to use forEach method using Array.from() method
+
+
+
+
+
+// InnerText vs InnerHTML vs TextContent
+// innerText: it will give the text of the element without the html tags and it will also not give the hidden text   (example output: DOM learning)
+// innerHTML: it will give the text of the element with the html tags and it will also not give the hidden text  (example output: DOM learning <span style="display: none;">test text</span>)
+// textContent: it will give the text of the element with the html tags and it will also give the hidden text   (example output: DOM learning test text)
 
 </script>
 

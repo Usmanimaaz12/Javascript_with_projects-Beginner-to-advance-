@@ -1,7 +1,8 @@
 // on form submit event take the value of the input field and append it to the list
 
+const form = document.querySelector('form');
 
-document.querySelector('form').addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     // const input_height = document.querySelector('input'); // this will be string
     const input_height = parseInt(document.querySelector('#height').value);

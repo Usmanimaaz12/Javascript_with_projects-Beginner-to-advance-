@@ -8,10 +8,9 @@ const body = document.querySelector('body');
 
 // loop through the buttons
 buttons.forEach(function (button) {
-    console.log(button);
-    
+    console.log(button); 
     // add an event listener to each button
-  button.addEventListener('click', function (e) {
+    button.addEventListener('click', function (e) {
     console.log(e);
     console.log(e.target); //
     if (e.target.id === 'grey') {

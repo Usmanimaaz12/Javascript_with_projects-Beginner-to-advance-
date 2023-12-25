@@ -6,20 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Chai aur code</h1>
+    <h1>Learning</h1>
     <button id="stop">Stop</button>
 </body>
 <script>
-    const sayHitesh = function(){
-        console.log("Hitesh");
-    }
-    const changeText = function(){
-        document.querySelector('h1').innerHTML = "best JS series"
+
+    // setTimeout(function(){
+    //     console.log("Hello")
+    // }, 2000)
+
+    const sayMaaz = function(){
+        console.log("Maaz");
     }
 
+    // setTimeout(sayMaaz, 2000)
+    
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "JS is fun"
+    }
+
+    // Take the reference of setTimeout function in a variable
     const changeMe = setTimeout(changeText, 2000)
 
     document.querySelector('#stop').addEventListener('click', function(){
+       // Stop the setTimeout function
         clearTimeout(changeMe)
         console.log("STOPPED")
     })

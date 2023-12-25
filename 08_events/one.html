@@ -27,14 +27,14 @@
     // attachEvent()
     // jQuery - on
 
-    // type, timestamp, defaultPrevented
+    // type, timestamp, preventDefault, stopPropagation
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false)
 
     document.getElementById('owl').addEventListener('click', function(e){
         console.log("owl clicked");
@@ -47,18 +47,23 @@
     //     console.log("google clicked");
     // }, false)
    
-    
+// REMOVE THE IMAGE WHEN CLICKED ON IT
+
     // document.querySelector('#images').addEventListener('click', function(e){
     //     console.log(e.target.tagName);
     //     if (e.target.tagName === 'IMG') {
     //         console.log(e.target.id);
+
+//IMPORTANT:  Here optimization is made by going to the parent node using the target and then removing the li
+
     //         let removeIt = e.target.parentNode
     //         removeIt.remove()
     //     }
     
         
     // })
-    
+    // method 2
     //removeIt.parentNode.removeChild(removeIt)
+    
 </script>
 </html>

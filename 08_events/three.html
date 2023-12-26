@@ -14,6 +14,8 @@
     const sayDate = function(str){
         console.log(str, Date.now());
     }
+
+// the main concept in this learning is to declare global variable to take reference of setTimeout in another function also
 let intervalId = null;
     document.querySelector('#start').addEventListener('click', function(){
         intervalId = setInterval(sayDate, 1000, "Maaz");

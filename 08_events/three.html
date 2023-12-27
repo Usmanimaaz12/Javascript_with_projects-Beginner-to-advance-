@@ -18,7 +18,7 @@
 // the main concept in this learning is to declare global variable to take reference of setTimeout in another function also
 let intervalId = null;
     document.querySelector('#start').addEventListener('click', function(){
-        intervalId = setInterval(sayDate, 1000, "Maaz");
+        intervalId = setInterval(sayDate, 1000, "Maaz");   // this shows how to pass arguments in setInterval
     })
 
     document.querySelector('#stop').addEventListener('click', function(){

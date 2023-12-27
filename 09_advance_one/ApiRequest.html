@@ -4,26 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    *{
+        color: aliceblue;
+    }
+</style>
 </head>
-<body style="background-color: #212121;">
-    0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete.
+<body style="background-color: #212121; color: aliceblue;">
+
+<h1>API Request</h1>
+
+<br>0	UNSENT	Client has been created. open() not called yet.
+<br>1	OPENED	open() has been called.
+<br>2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+<br>3	LOADING	Downloading; responseText holds partial data.
+<br>4	DONE	The operation is complete.
+
+
+<br>  <h1>ASSIGNMENT</h1>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" id="img" src="" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text" style="color:black;">F</p>
+  </div>
+</div>
+
 </body>
 <script>
-    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
+    const requestUrl = 'https://api.github.com/users/usmanimaaz12'   // hardcoded url of github api to get user data 
+    const xhr = new XMLHttpRequest();     // create a new object of XMLHttpRequest
+    xhr.open('GET', requestUrl)             // open the request with GET method and url 
+   
+    xhr.onreadystatechange = function(){        // onreadystatechange is an event which is fired when the state of the request changes
         console.log(xhr.readyState);
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
-            console.log(data.followers);
+            const data = JSON.parse(this.responseText)   // here responseText is a property of xhr object which contains the response from the server
+            console.log(data);
+            console.log(typeof data); // actually the response is in string format so we need to convert it into object format using JSON.parse() method ;done above
+            console.log(data.followers); 
+            console.log(data.avatar_url);
+
+           document.getElementById('img').src = data.avatar_url;
+           document.querySelector('.card-text').innerHTML = `Followers : ${data.followers}`;
+
         }
     }
-    xhr.send();
+    xhr.send();  // send the request to the server because open method only opens the request but does not send it     
+
 </script>
 </html>

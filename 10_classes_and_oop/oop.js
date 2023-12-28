@@ -31,7 +31,7 @@ function User(username, loginCount, isLoggedIn){
 
     }
 
-    return this
+    return this // this is optional because it is returned by default
 }
 
 // Note :  If new is not used then this will create and change the same object again and again

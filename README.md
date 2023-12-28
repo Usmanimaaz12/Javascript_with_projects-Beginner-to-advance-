@@ -1,4 +1,4 @@
-# JavaScript Beginner to Advance (Projects)
+# JavaScript Beginner to Advance (Mini-Projects)
 
 This repository contains a comprehensive guide to learning JavaScript from the basics to advanced concepts. It is designed to help you build a strong foundation in JavaScript programming and provide you with hands-on experience through various projects.
 

@@ -16,39 +16,39 @@
     //     function displayName() {
     //         console.log(name); 
     //     }
-    //     displayName();
+    //     displayName();   
     // }
     // init();
 
     // function outer(){
     //     let username = "maaz"
-    //     console.log("OUTER", secret);
+    //     console.log("OUTER", secret);   // uncaught reference error
     //     function inner(){
     //         let secret = "my123"
     //         console.log("inner", username);
     //     }
     //     function innerTwo(){
     //         console.log("innerTwo", username);
-    //         console.log(secret);
+    //         console.log(secret);    // uncaught reference error
     //     }
     //     inner()
     //     innerTwo()
 
     // }
     // outer()
-    // console.log("TOO OUTER", username);
+    // console.log("TOO OUTER", username); // uncaught reference error
 
 
-    // function makeFunc() {
-    //     const name = "Mozilla";
-    //     function displayName() {
-    //         console.log(name);
-    //     }
-    //     return displayName;
-    // }
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
 
-    // const myFunc = makeFunc();
-    // myFunc();
+    const myFunc = makeFunc();
+    myFunc();
 
     </script>
     <script>
@@ -58,16 +58,20 @@
         // document.getElementById("green").onclick = function(){
         //     document.body.style.backgroundColor = `green`
         // }
+// the above is not obeying the DRY principle
 
+// so we can use closure to make it DRY
         function clickHandler(color){
-            // document.body.style.backgroundColor = `${color}`
 
+            // document.body.style.backgroundColor = `${color}`  // this will not work because the function is not called yet
+
+            // so we will return a function from the function, and then call it when the button is clicked
             return function(){
                 document.body.style.backgroundColor = `${color}`
             }
         }
 
-        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('orange').onclick = clickHandler("orange")  // this will return a function, and then we will call it when the button is clicked
         document.getElementById('green').onclick = clickHandler("green")
 
     </script>

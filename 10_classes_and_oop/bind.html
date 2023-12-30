@@ -11,14 +11,14 @@
 <script>
     class React {
         constructor(){
-            this.library = "React"
-            this.server = "https://localhost:300"
+            this.library = "React"   // hard coded value
+            this.server = "https://localhost:300"    //hard coded value
 
-            //requirement
+            //requirement : as soon as the button is clicked, the server value should be printed in the console
             document
                 .querySelector('button')
-                .addEventListener('click', this.handleClick.bind(this))
-
+                // .addEventListener('click', this.handleClick) // will not have access to the props of React class
+                .addEventListener('click', this.handleClick.bind(this)) 
         }
         handleClick(){
             console.log("button clicked");
@@ -27,5 +27,26 @@
     }
 
     const app = new React()
+</script>
+
+<!-- Example of call and bind -->
+<!-- <script>
+    const person = {
+        name: "John",
+        age: 30,
+        greet: function(){
+            console.log("Hello, my name is " + this.name);
+        }
+    }
+
+    person.greet()  // Hello, my name is John
+
+    const friend = {
+        name: "Jane",
+        age: 25
+    }
+
+    person.greet.call(friend)   // Hello, my name is Jane
+    person.greet.bind(friend)() // Hello, my name is Jane -->
 </script>
 </html>

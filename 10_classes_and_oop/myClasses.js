@@ -1,4 +1,7 @@
+
 // ES6
+// classes in javascript are just syntactic sugar which came in ES6 to make it easier to work with objects and prototypes
+
 
 class User {
     constructor(username, email, password){
@@ -6,7 +9,7 @@ class User {
         this.email = email;
         this.password = password
     }
-
+    // NOTE :  function keyword is not used in classes
     encryptPassword(){
         return `${this.password}abc`
     }
@@ -21,7 +24,9 @@ const chai = new User("chai", "chai@gmail.com", "123")
 console.log(chai.encryptPassword());
 console.log(chai.changeUsername());
 
-// behind the scene
+
+
+// Behind the scene : unwrapped version of the above code
 
 function User(username, email, password){
     this.username = username;
@@ -29,7 +34,7 @@ function User(username, email, password){
     this.password = password
 }
 
-User.prototype.encryptPassword = function(){
+User.prototype.encryptPassword = function(){    // we can add methods to the prototype
     return `${this.password}abc`
 }
 User.prototype.changeUsername = function(){
@@ -37,7 +42,7 @@ User.prototype.changeUsername = function(){
 }
 
 
-const tea = new User("tea", "tea@gmail.com", "123")
+const tea = new User("tea", "tea@gmail.com", "123")  
 
 console.log(tea.encryptPassword());
 console.log(tea.changeUsername());

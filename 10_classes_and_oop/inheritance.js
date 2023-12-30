@@ -1,3 +1,9 @@
+// extends and super keywords 
+// super keyword is used to call the constructor of the parent class (.call() method is used behind the scenes to pass the this value)
+// extends keyword is used to inherit the properties and methods of the parent class (prototype chain is used behind the scenes using __proto__ property)
+
+
+
 class User {
     constructor(username){
         this.username = username
@@ -27,4 +33,4 @@ const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
 
-console.log(chai instanceof User);
+console.log(chai instanceof User);  // true  // instanceof operator is used to check if an object is an instance of a class or not

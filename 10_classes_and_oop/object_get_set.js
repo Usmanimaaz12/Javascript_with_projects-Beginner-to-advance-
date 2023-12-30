@@ -1,5 +1,5 @@
 const User = {
-    _email: 'h@hc.com',
+    _email: 'm@mu.com',
     _password: "abc",
 
 
@@ -13,4 +13,4 @@ const User = {
 }
 
 const tea = Object.create(User)
-console.log(tea.email);
+console.log(tea.email);  //  Note : getting email using getter is with .email and not by .email() because it is not a function it is a property.

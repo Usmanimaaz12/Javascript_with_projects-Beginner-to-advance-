@@ -14,7 +14,7 @@ class User {
         return this._email.toUpperCase()
     }
     set email(value){
-        this._email = value
+        this._email = value          // Note : "_email" is private property
     }
     // Note : get has no parameter and set has one parameter
     // Note : set do not have return statement
@@ -23,7 +23,7 @@ class User {
     }
 
     set password(value){
-        this._password = value
+        this._password = value          // Note : "_password" is private property
     }
 }
 

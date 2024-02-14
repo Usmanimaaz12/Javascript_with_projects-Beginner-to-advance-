@@ -27,3 +27,5 @@ switch (month) {
         console.log("default case match");
         break;
 }
+
+//  Note : If we dont use break statement then it will execute all the cases after the match case.

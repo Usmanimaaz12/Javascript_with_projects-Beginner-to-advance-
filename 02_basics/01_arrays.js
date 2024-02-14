@@ -17,8 +17,9 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.push(7)
 // myArr.pop()
 
-// myArr.unshift(9)   // add at first
+myArr.unshift(9)   // add at first
 myArr.shift()        // remove from first
+
 console.log(myArr); // [ 1, 2, 3, 4, 5 ]
 // console.log(myArr.includes(9));  // false : 9 is not in array
 // console.log(myArr.indexOf(3));   // 2 : 3 is in index 2

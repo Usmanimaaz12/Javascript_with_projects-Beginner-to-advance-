@@ -52,7 +52,7 @@ function addone(num){
 
 
 
- console.log(addTwo(5))  // this will not work as "function expression" is not hoisted
+console.log(addTwo(5))  // this will not work as "function expression" is not hoisted
 const addTwo = function(num){
     return num + 2
 }

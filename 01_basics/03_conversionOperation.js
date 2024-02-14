@@ -60,11 +60,11 @@ let str3 = str1 + str2
 // console.log(1 + 2 + "2");    // "32" always left to right
 //                                          -------------------------
 
-//  console.log(1 + 2 + 2 + "2");    // "52" always left to right
-//  console.log( (3 + 4) * 5 % 3);   // 2  
+ console.log(1 + 2 + 2 + "2");    // "52" always left to right
+ console.log( (3 + 4) * 5 % 3);   // 2  
 
-// console.log(+true);  // 1    ;  + converts value to number
-//  console.log(+"");    // 0    ;  + converts value to number
+console.log(+true);  // 1    ;  + converts value to number
+ console.log(+"");    // 0    ;  + converts value to number
 
 let num1, num2, num3
 

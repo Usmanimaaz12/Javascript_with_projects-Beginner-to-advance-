@@ -1,6 +1,6 @@
 "use strict"; // treat all JS code as newer version of JS (ES6)
 
-//Data Types in JS => 8
+//Data Types in JS => 8  (OSU BS BN)
 // 1. number
 // 2. bigint      (created using n at the end of number, example : 10n)
 // 3. string

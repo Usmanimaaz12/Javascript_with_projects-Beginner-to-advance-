@@ -4,13 +4,13 @@ const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    // const input_height = document.querySelector('input'); // this will be string
+    // const input_height = document.querySelector('input').value; // this will be string
     const input_height = parseInt(document.querySelector('#height').value);
 
     const input_weight = parseInt(document.querySelector('#weight').value);
 
     console.log(input_height, input_weight);
-    const bmi = input_weight / ((input_height / 100) ** 2).toFixed(2);
+    const bmi = input_weight / ((input_height / 100) ** 2).toFixed(2); // toFixed(2) will give us 2 decimal places
     console.log(bmi);
 
     const result = document.querySelector('#results');

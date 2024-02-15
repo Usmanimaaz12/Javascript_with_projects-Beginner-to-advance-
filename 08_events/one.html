@@ -32,17 +32,22 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+
+    // Bubbling and capturing :
+    // elem.addEventListener("click", function(){}, true) // capturing
+    // elem.addEventListener("click", function(){}, false) // bubbling
+
     document.getElementById('images').addEventListener('click', function(e){
         console.log("clicked inside the ul");
     }, false)
 
     document.getElementById('owl').addEventListener('click', function(e){
         console.log("owl clicked");
-        e.stopPropagation()
+        e.stopPropagation()   // If this is commented , if we click on owl, it will also trigger the ul event
     }, false)
     
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+        e.preventDefault(); // If this is commented, it will go to google.com
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
@@ -54,7 +59,7 @@
     //     if (e.target.tagName === 'IMG') {
     //         console.log(e.target.id);
 
-//IMPORTANT:  Here optimization is made by going to the parent node using the target and then removing the li
+//IMPORTANT:  Here optimization is made by going to the parent node using the target and then removing the "li" element
 
     //         let removeIt = e.target.parentNode
     //         removeIt.remove()

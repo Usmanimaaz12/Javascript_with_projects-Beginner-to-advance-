@@ -24,6 +24,6 @@ var officers = [
 // // What you need
 // [20, 24, 56, 88]
 
-// Answer:
-const ids = officers.map((off) => off.id)
-console.log(ids);
+const ids = officers.map((officer) => officer.id);
+console.log(ids)
+

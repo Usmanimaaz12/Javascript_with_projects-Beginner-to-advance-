@@ -17,7 +17,7 @@ for (const num of arr) {
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    // console.log(`Each char is ${greet}`)
+    console.log(`Each char is ${greet}`);
 }
 
 // Maps
@@ -52,12 +52,17 @@ for (const [key, value] of myObject) {
     
 }   // TypeError: myObject is not iterable
 
-// for (const [key, value] of Object.entries(myObject)) {
-//     console.log(key, ':-', value);
+for (const [key, value] of Object.entries(myObject)) {
+    console.log(key, ':-', value);
     
-// }   // game1 :- NFS  game2 :- Spiderman     
+}   // game1 :- NFS  game2 :- Spiderman     
 
 for(const key in myObject) {
     console.log(key, ':-', myObject[key]);
     
 }  // game1 :- NFS  game2 :- Spiderman
+
+// Three ways to iterate over object
+// object.keys(obj_name)
+// object.values(obj_name) 
+// object.entries(obj_name) => [key, value]
